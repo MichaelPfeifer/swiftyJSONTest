@@ -19,25 +19,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        if let path = Bundle.main.path(forResource: "ServoListe", ofType: "json") {
-            do {
-                let data = try NSData(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions.mappedIfSafe)
-                let jsonObj = JSON(data: data as Data)
-                if jsonObj != JSON.null {
-                    print("jsonData:\(jsonObj)")
-                 let name = jsonObj["listen", "servo1", "servoname"]
-                   print("\(name)")
-                } else {
-                    print("Could not get json from file, make sure that file contains valid json.")
-                }
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        } else {
-            print("Invalid filename/path.")
-        }
-
-    
+     loadJSON()
      
         
      }
@@ -51,7 +33,7 @@ class ViewController: NSViewController {
     }
      // Load JSON von ServoListe
     
- /*   func loadJSON() {
+    func loadJSON() {
         if let path = Bundle.main.path(forResource: "ServoListe", ofType: "json") {
             do {
                 let data = try NSData(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions.mappedIfSafe)
@@ -68,6 +50,6 @@ class ViewController: NSViewController {
             print("Invalid filename/path.")
         }
 }
-*/
+
 
 }
