@@ -37,12 +37,13 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
                 
                 
                 if (column.identifier == "servoname") {
-                   let name = names[0]
+                   let name = names[row]
                     cellView.textField?.stringValue = name
                     return cellView
                 }
                 else if (column.identifier == "busnummer") {
-                    cellView.textField?.intValue = 11
+                    let number = numbers[row]
+                    cellView.textField?.stringValue = number
                     return cellView
                 }
                 

@@ -8,18 +8,29 @@
                {
         
                "servoname": "Linker Daumen",
-               "busnummer":  11
+               "busnummer":  "11"
                },
           "servo2" :
                {
                "servoname": "Linker Zeigefinger",
-               "busnummer": "12"
+               "busnummer":  "12"
                },
           "servo3" :
                {
-               "servoname": "Linker Ringfinger",
-               "busnummer": "13"
+               "servoname": "Linker Mittelfinger",
+               "busnummer":  "13"
                },
+          "servo4" :
+               {
+               "servoname": "Linker Ringfinger",
+               "busnummer":  "14"
+               },
+         "servo5" :
+              {
+              "servoname": "Linker kleiner Finger",
+              "busnummer":  "15"
+              },
+
     }
     
     

@@ -10,7 +10,8 @@ import Foundation
 import SwiftyJSON
 
  var names = [String]()
-    
+ var numbers = [String]()
+ var NumberofRows = 0
 
 
 func loadJSON()  {
@@ -19,11 +20,19 @@ func loadJSON()  {
             let data = try NSData(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions.mappedIfSafe)
             let jsonObj = JSON(data: data as Data)
             if jsonObj != JSON.null {
-                //                 print("jsonData:\(jsonObj)")
-                let name = jsonObj["listen"]["servo1"]["servoname"]
                 
-                //             print("\(name)")
-                names.append("\(name)")
+                NumberofRows = jsonObj["listen"].count
+                
+                for i in 1...NumberofRows {
+                    var servo = "servo"
+                    servo += "\(i)"
+                    let name = jsonObj["listen"][servo]["servoname"]
+                    let number = jsonObj["listen"][servo]["busnummer"]
+                    names.append("\(name)")
+                    numbers.append("\(number)")
+                    }
+                
+              
             } else {
                 print("Could not get json from file, make sure that file contains valid json.")
             }
