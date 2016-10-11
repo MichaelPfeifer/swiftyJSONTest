@@ -10,12 +10,12 @@
                "servoname": "Linker Daumen",
                "busnummer":  11
                },
-        "servo2" :
+          "servo2" :
                {
                "servoname": "Linker Zeigefinger",
                "busnummer": "12"
                },
-        "servo3" :
+          "servo3" :
                {
                "servoname": "Linker Ringfinger",
                "busnummer": "13"

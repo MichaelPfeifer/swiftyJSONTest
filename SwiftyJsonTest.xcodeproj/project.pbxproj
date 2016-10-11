@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44D9A785AFCC7D0A14E74B54 /* Pods_SwiftyJsonTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B0E781FA6F3D5781F9FA95 /* Pods_SwiftyJsonTestTests.framework */; };
+		716D52B71DACFBDA00C5F888 /* LoadJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716D52B61DACFBD900C5F888 /* LoadJSON.swift */; };
 		71A72E6A1DA94670000A1C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A72E691DA9466F000A1C06 /* AppDelegate.swift */; };
 		71A72E6C1DA94670000A1C06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A72E6B1DA94670000A1C06 /* ViewController.swift */; };
 		71A72E6E1DA94670000A1C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71A72E6D1DA94670000A1C06 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		32CF13E8EE7C6217CC468BAC /* Pods_SwiftyJsonTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyJsonTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		603FBC89559522D006D97B3C /* Pods-SwiftyJsonTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyJsonTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyJsonTestTests/Pods-SwiftyJsonTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6DD28E36F48C41C79D83AD6F /* Pods_SwiftyJsonTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyJsonTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		716D52B61DACFBD900C5F888 /* LoadJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadJSON.swift; sourceTree = "<group>"; };
 		71A72E661DA9466F000A1C06 /* SwiftyJsonTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyJsonTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A72E691DA9466F000A1C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71A72E6B1DA94670000A1C06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				71A72E6F1DA94670000A1C06 /* Main.storyboard */,
 				71A72E721DA94670000A1C06 /* Info.plist */,
 				71A72E941DA954B4000A1C06 /* ServoListe.json */,
+				716D52B61DACFBD900C5F888 /* LoadJSON.swift */,
 			);
 			path = SwiftyJsonTest;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71A72E6C1DA94670000A1C06 /* ViewController.swift in Sources */,
+				716D52B71DACFBDA00C5F888 /* LoadJSON.swift in Sources */,
 				71A72E6A1DA94670000A1C06 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

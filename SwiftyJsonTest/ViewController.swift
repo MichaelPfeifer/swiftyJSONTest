@@ -12,44 +12,55 @@ import SwiftyJSON
 
 
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
 
+ 
+    @IBOutlet weak var tableView: NSTableView!
    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
-     loadJSON()
-     
-        
+    loadJSON()
+    
+      print(names)
      }
     
-
-
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return names.count
+    }
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        if let column = tableColumn {
+            if let cellView = tableView.make(withIdentifier: column.identifier, owner: nil) as? NSTableCellView {
+                
+                
+                if (column.identifier == "servoname") {
+                   let name = names[0]
+                    cellView.textField?.stringValue = name
+                    return cellView
+                }
+                else if (column.identifier == "busnummer") {
+                    cellView.textField?.intValue = 11
+                    return cellView
+                }
+                
+                return cellView
+            }
+        }
+        return nil
+    }
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
-     // Load JSON von ServoListe
+
+}
+
+
     
-    func loadJSON() {
-        if let path = Bundle.main.path(forResource: "ServoListe", ofType: "json") {
-            do {
-                let data = try NSData(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions.mappedIfSafe)
-                let jsonObj = JSON(data: data as Data)
-                if jsonObj != JSON.null {
-                    print("jsonData:\(jsonObj)")
-                } else {
-                    print("Could not get json from file, make sure that file contains valid json.")
-                }
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        } else {
-            print("Invalid filename/path.")
-        }
-}
+  
 
 
-}
