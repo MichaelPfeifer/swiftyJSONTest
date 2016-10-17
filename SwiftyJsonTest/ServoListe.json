@@ -2,35 +2,55 @@
     
     
     "listen":{
-    
-    
-          "servo1":
-               {
         
-               "servoname": "Linker Daumen",
-               "busnummer":  "11"
-               },
-          "servo2" :
-               {
-               "servoname": "Linker Zeigefinger",
-               "busnummer":  "12"
-               },
-          "servo3" :
-               {
-               "servoname": "Linker Mittelfinger",
-               "busnummer":  "13"
-               },
-          "servo4" :
-               {
-               "servoname": "Linker Ringfinger",
-               "busnummer":  "14"
-               },
-         "servo5" :
-              {
-              "servoname": "Linker kleiner Finger",
-              "busnummer":  "15"
-              },
-
+        
+        "servo1":
+        {
+            
+            "servoname": "Linker Daumen",
+            "busnummer":  "11",
+            "servomin": "0",
+            "servomax": "180",
+            "servohome": "90",
+            "beschreibung": "Servo am Hand Controller"
+        },
+        "servo2" :
+        {
+            "servoname": "Linker Zeigefinger",
+            "busnummer":  "12",
+            "servomin": "10",
+            "servomax": "180",
+            "servohome": "90",
+            "beschreibung": "Servo am Hand Controller"
+        },
+        "servo3" :
+        {
+            "servoname": "Linker Mittelfinger",
+            "busnummer":  "13",
+            "servomin": "20",
+            "servomax": "180",
+            "servohome": "90",
+            "beschreibung": "Servo am Hand Controller"
+        },
+        "servo4" :
+        {
+            "servoname": "Linker Ringfinger",
+            "busnummer":  "14",
+            "servomin": "30",
+            "servomax": "180",
+            "servohome": "90",
+            "beschreibung": "Servo am Hand Controller"
+        },
+        "servo5" :
+        {
+            "servoname": "Linker kleiner Finger",
+            "busnummer":  "15",
+            "servomin": "40",
+            "servomax": "180",
+            "servohome": "90",
+            "beschreibung": "Servo am Hand Controller Test test"
+        },
+        
     }
     
     

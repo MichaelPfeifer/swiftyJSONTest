@@ -17,8 +17,16 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
  
     @IBOutlet weak var tableView: NSTableView!
    
+    @IBOutlet weak var servoName: NSTextField!
+    @IBOutlet weak var busNummer: NSTextField!
+    @IBOutlet weak var servoMin: NSTextField!
+    @IBOutlet weak var servoMax: NSTextField!
+    @IBOutlet weak var servoHome: NSTextField!
+    @IBOutlet weak var beSchreibung: NSTextField!
     
-    
+ 
+    @IBAction func addJson(_ sender: AnyObject) {
+          }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +36,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
       print(names)
      }
     
-    func numberOfRows(in tableView: NSTableView) -> Int {
+      func numberOfRows(in tableView: NSTableView) -> Int {
         return names.count
     }
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -57,10 +65,23 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             // Update the view, if already loaded.
         }
     }
-
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        print(tableView.selectedRow)
+        let servo = names[tableView.selectedRow]
+        let number = numbers[tableView.selectedRow]
+        let servomin = servomins[tableView.selectedRow]
+        let servomax = servomaxs[tableView.selectedRow]
+        let servohome = servohomes[tableView.selectedRow]
+        let beschreibung = beschreibungs[tableView.selectedRow]
+        servoName.stringValue = servo
+        busNummer.stringValue = number
+        servoMin.stringValue = servomin
+        servoMax.stringValue = servomax
+        servoHome.stringValue = servohome
+        beSchreibung.stringValue = beschreibung
+    }
+    
 }
-
-
     
   
 

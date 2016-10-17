@@ -9,9 +9,13 @@
 import Foundation
 import SwiftyJSON
 
- var names = [String]()
- var numbers = [String]()
- var NumberofRows = 0
+var names = [String]()
+var numbers = [String]()
+var servomins = [String]()
+var servomaxs = [String]()
+var servohomes = [String]()
+var beschreibungs = [String]()
+var NumberofRows = 0
 
 
 func loadJSON()  {
@@ -28,11 +32,19 @@ func loadJSON()  {
                     servo += "\(i)"
                     let name = jsonObj["listen"][servo]["servoname"]
                     let number = jsonObj["listen"][servo]["busnummer"]
+                    let servomin = jsonObj["listen"][servo]["servomin"]
+                    let servomax = jsonObj["listen"][servo]["servomax"]
+                    let servohome = jsonObj["listen"][servo]["servohome"]
+                    let beschreibung = jsonObj["listen"][servo]["beschreibung"]
                     names.append("\(name)")
                     numbers.append("\(number)")
-                    }
+                    servomins.append("\(servomin)")
+                    servomaxs.append("\(servomax)")
+                    servohomes.append("\(servohome)")
+                    beschreibungs.append("\(beschreibung)")
+                }
                 
-              
+                
             } else {
                 print("Could not get json from file, make sure that file contains valid json.")
             }
